@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Клуб Затесь · полный архив (все гости и все встречи)</title>
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    body { background: #f4efe7; font-family: 'Segoe UI', Roboto, system-ui; }
+    .guest-card, .meet-card {
+      border: none; border-radius: 1.5rem 1.5rem 1.2rem 1.2rem; overflow: hidden;
+      transition: all 0.25s ease; background-color: #fffffffb;
+      box-shadow: 0 15px 30px -12px rgba(30,50,30,0.2); height: 100%; display: flex; flex-direction: column;
+    }
+    .guest-card:hover, .meet-card:hover { transform: translateY(-6px); box-shadow: 0 25px 40px -10px #2f4d3a; }
+    .photo-placeholder {
+      background: linear-gradient(130deg, #b8cfb0, #9ab394); height: 200px;
+      display: flex; align-items: center; justify-content: center; color: #1d452a; font-size: 4.5rem;
+      border-bottom: 4px solid #bcaa8f;
+    }
+    .guest-badge { background: #dbd0c2; color: #2b482b; font-weight: 600; font-size: 0.8rem; padding: 0.2rem 1rem; border-radius: 30px; display: inline-block; }
+    .role-tag {
+      background: #e3eedb; color: #1c542c; font-weight: 600; font-size: 0.9rem;
+      padding: 0.3rem 1.2rem; border-radius: 40px; border-left: 4px solid #7b5f3f; margin: 0.5rem 0; display: inline-block;
+    }
+    .meet-list, .guest-list {
+      list-style: none; padding: 0; margin-top: 0.5rem; border-top: 1px dashed #cfc4b5; font-size: 0.9rem;
+    }
+    .meet-list li, .guest-list li { padding: 0.3rem 0; border-bottom: 1px dashed #eee5db; display: flex; align-items: baseline; }
+    .meet-list i, .guest-list i { color: #5f844b; width: 1.6rem; }
+    .meet-number { background: #ecd9c6; color: #2b482b; font-weight: 700; font-size: 1.2rem; padding: 0.4rem 1.2rem; border-radius: 40px 0 0 40px; display: inline-block; }
+    .footer-site { background: #2d4d3a; color: #f0ede5; }
+    .page-header { background: linear-gradient(135deg, #2b5e3b 0%, #1d3e2b 100%); color: white; padding: 2rem 0; margin-bottom: 2rem; }
+    .link-meet, .link-guest { text-decoration: none; font-weight: 500; color: #1d4f1d; }
+    .link-meet:hover, .link-guest:hover { text-decoration: underline; color: #0b2e0b; }
+  </style>
+</head>
+<body>
+
+<!-- НАВИГАЦИЯ МЕЖДУ РАЗДЕЛАМИ -->
+<div class="bg-dark py-2 text-white sticky-top">
+  <div class="container d-flex justify-content-center gap-4 flex-wrap">
+    <a href="#guests-section" class="text-white fw-bold fs-5"><i class="bi bi-people-fill me-1"></i>Гости (84+)</a>
+    <span class="text-white-50">|</span>
+    <a href="#meets-section" class="text-white fw-bold fs-5"><i class="bi bi-calendar-event me-1"></i>Встречи (0–48)</a>
+  </div>
+</div>
+
+<!-- ==================== ГОСТИ (84+ карточек) ==================== -->
+<div id="guests-section" class="page-header">
+  <div class="container text-center">
+    <h1 class="display-4 fw-normal" style="font-family: 'Times New Roman', serif;">Гости клуба «Затесь»</h1>
+    <p class="lead fs-4">84+ участников · имена кликабельны → переход к встречам</p>
+    <div class="mt-3">
+      <a href="#meets-section" class="btn btn-light btn-lg rounded-pill px-4"><i class="bi bi-arrow-right-circle"></i> Перейти к списку встреч</a>
+    </div>
+  </div>
+</div>
+
+<div class="container mb-5">
+  <div class="row g-4">
+    <!-- ========== ГОСТИ (все 84 персоны, каждая с индивидуальным ID) ========== -->
+
+    <!-- 1. Валентина Майстренко -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-valentina-m">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-person-circle"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">председатель</span>
+          <h5 class="fw-bold">Валентина Майстренко</h5>
+          <div class="role-tag">журналист, гл. редактор</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet0" class="link-meet">0</a>, <a href="#meet1" class="link-meet">1</a>, <a href="#meet2" class="link-meet">2</a>, <a href="#meet3" class="link-meet">3</a>, <a href="#meet4" class="link-meet">4</a>, <a href="#meet5" class="link-meet">5</a>, <a href="#meet6" class="link-meet">6</a>, <a href="#meet7" class="link-meet">7</a>, <a href="#meet8" class="link-meet">8</a>, <a href="#meet9" class="link-meet">9</a>, <a href="#meet10" class="link-meet">10</a>, <a href="#meet11" class="link-meet">11</a>, <a href="#meet12" class="link-meet">12</a>, <a href="#meet13" class="link-meet">13</a>, <a href="#meet14" class="link-meet">14</a>, <a href="#meet15" class="link-meet">15</a>, <a href="#meet16" class="link-meet">16</a>, <a href="#meet17" class="link-meet">17</a>, <a href="#meet18" class="link-meet">18</a>, <a href="#meet19" class="link-meet">19</a>, <a href="#meet20" class="link-meet">20</a>, <a href="#meet21" class="link-meet">21</a>, <a href="#meet22" class="link-meet">22</a>, <a href="#meet23" class="link-meet">23</a>, <a href="#meet24" class="link-meet">24</a>, <a href="#meet25a" class="link-meet">25a</a>, <a href="#meet25b" class="link-meet">25b</a>, <a href="#meet26" class="link-meet">26</a>, <a href="#meet27" class="link-meet">27</a>, <a href="#meet28" class="link-meet">28</a>, <a href="#meet29" class="link-meet">29</a>, <a href="#meet30" class="link-meet">30</a>, <a href="#meet31" class="link-meet">31</a>, <a href="#meet32" class="link-meet">32</a>, <a href="#meet33" class="link-meet">33</a>, <a href="#meet34" class="link-meet">34</a>, <a href="#meet35" class="link-meet">35</a>, <a href="#meet36a" class="link-meet">36a</a>, <a href="#meet36b" class="link-meet">36b</a>, <a href="#meet37" class="link-meet">37</a>, <a href="#meet38" class="link-meet">38</a>, <a href="#meet39" class="link-meet">39</a>, <a href="#meet40" class="link-meet">40</a>, <a href="#meet41" class="link-meet">41</a>, <a href="#meet42" class="link-meet">42</a>, <a href="#meet43" class="link-meet">43</a>, <a href="#meet44" class="link-meet">44</a>, <a href="#meet45" class="link-meet">45</a>, <a href="#meet46" class="link-meet">46</a>, <a href="#meet47" class="link-meet">47</a>, <a href="#meet48" class="link-meet">48</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Антонина Пантелеева -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-panteleeva">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-file-text"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">филолог</span>
+          <h5 class="fw-bold">Антонина Пантелеева</h5>
+          <div class="role-tag">канд. наук, астафьевед</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet0" class="link-meet">0</a>, <a href="#meet2" class="link-meet">2</a>, <a href="#meet4" class="link-meet">4</a>, <a href="#meet8" class="link-meet">8</a>, <a href="#meet14" class="link-meet">14</a>, <a href="#meet15" class="link-meet">15</a>, <a href="#meet19" class="link-meet">19</a>, <a href="#meet23" class="link-meet">23</a>, <a href="#meet32" class="link-meet">32</a>, <a href="#meet39" class="link-meet">39</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Светлана Сорокина -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-sorokina">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-camera-reels"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">актриса</span>
+          <h5 class="fw-bold">Светлана Сорокина</h5>
+          <div class="role-tag">засл. арт. РФ</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet1" class="link-meet">1</a>, <a href="#meet2" class="link-meet">2</a>, <a href="#meet3" class="link-meet">3</a>, <a href="#meet4" class="link-meet">4</a>, <a href="#meet7" class="link-meet">7</a>, <a href="#meet9" class="link-meet">9</a>, <a href="#meet12" class="link-meet">12</a>, <a href="#meet13" class="link-meet">13</a>, <a href="#meet14" class="link-meet">14</a>, <a href="#meet17" class="link-meet">17</a>, <a href="#meet18" class="link-meet">18</a>, <a href="#meet21" class="link-meet">21</a>, <a href="#meet22" class="link-meet">22</a>, <a href="#meet23" class="link-meet">23</a>, <a href="#meet25a" class="link-meet">25a</a>, <a href="#meet31" class="link-meet">31</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Анатолий Козлов -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-kozlov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-house-heart"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">друг семьи</span>
+          <h5 class="fw-bold">Анатолий Козлов</h5>
+          <div class="role-tag">профессор, домашний музей</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet10" class="link-meet">10</a>, <a href="#meet12" class="link-meet">12</a>, <a href="#meet13" class="link-meet">13</a>, <a href="#meet19" class="link-meet">19</a>, <a href="#meet22" class="link-meet">22</a>, <a href="#meet38" class="link-meet">38</a>, <a href="#meet39" class="link-meet">39</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Герман Паштов -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-pashtov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-brush"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">академик РАХ</span>
+          <h5 class="fw-bold">Герман Паштов</h5>
+          <div class="role-tag">народный художник РФ</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet2" class="link-meet">2</a>, <a href="#meet4" class="link-meet">4</a>, <a href="#meet12" class="link-meet">12</a>, <a href="#meet17" class="link-meet">17</a>, <a href="#meet21" class="link-meet">21</a>, <a href="#meet22" class="link-meet">22</a>, <a href="#meet39" class="link-meet">39</a>, <a href="#meet46" class="link-meet">46</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Анна Киселёва -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-kiseleva">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-music-note-beamed"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">певица</span>
+          <h5 class="fw-bold">Анна Киселёва</h5>
+          <div class="role-tag">солистка оперы</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet4" class="link-meet">4</a>, <a href="#meet11" class="link-meet">11</a>, <a href="#meet12" class="link-meet">12</a>, <a href="#meet16" class="link-meet">16</a>, <a href="#meet17" class="link-meet">17</a>, <a href="#meet20" class="link-meet">20</a>, <a href="#meet22" class="link-meet">22</a>, <a href="#meet25b" class="link-meet">25b</a>, <a href="#meet32" class="link-meet">32</a>, <a href="#meet33" class="link-meet">33</a>, <a href="#meet36a" class="link-meet">36a</a>, <a href="#meet36b" class="link-meet">36b</a>, <a href="#meet37" class="link-meet">37</a>, <a href="#meet41" class="link-meet">41</a>, <a href="#meet45" class="link-meet">45</a>, <a href="#meet46" class="link-meet">46</a>, <a href="#meet47" class="link-meet">47</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Дмитрий Васянович -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-vasyanovich">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-radio"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">радиожурналист</span>
+          <h5 class="fw-bold">Дмитрий Васянович</h5>
+          <div class="role-tag">композитор, регент</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet21" class="link-meet">21</a>, <a href="#meet22" class="link-meet">22</a>, <a href="#meet23" class="link-meet">23</a>, <a href="#meet25a" class="link-meet">25a</a>, <a href="#meet25b" class="link-meet">25b</a>, <a href="#meet26" class="link-meet">26</a>, <a href="#meet32" class="link-meet">32</a>, <a href="#meet44" class="link-meet">44</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Татьяна Сёмкина -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-semkina">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-emoji-smile"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">актриса</span>
+          <h5 class="fw-bold">Татьяна Сёмкина</h5>
+          <div class="role-tag">театр кукол, чтец</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet29" class="link-meet">29</a>, <a href="#meet32" class="link-meet">32</a>, <a href="#meet33" class="link-meet">33</a>, <a href="#meet34" class="link-meet">34</a>, <a href="#meet36a" class="link-meet">36a</a>, <a href="#meet37" class="link-meet">37</a>, <a href="#meet38" class="link-meet">38</a>, <a href="#meet39" class="link-meet">39</a>, <a href="#meet40" class="link-meet">40</a>, <a href="#meet41" class="link-meet">41</a>, <a href="#meet42" class="link-meet">42</a>, <a href="#meet43" class="link-meet">43</a>, <a href="#meet44" class="link-meet">44</a>, <a href="#meet45" class="link-meet">45</a>, <a href="#meet46" class="link-meet">46</a>, <a href="#meet47" class="link-meet">47</a>, <a href="#meet48" class="link-meet">48</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Валентина Швецова -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-shvetsova">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-archive"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">хранитель</span>
+          <h5 class="fw-bold">Валентина Швецова</h5>
+          <div class="role-tag">автор «Река жизни»</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet1" class="link-meet">1</a>, <a href="#meet2" class="link-meet">2</a>, <a href="#meet4" class="link-meet">4</a>, <a href="#meet22" class="link-meet">22</a>, <a href="#meet25a" class="link-meet">25a</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. Владимир Пороцкий -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-porotsky">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-music-note-list"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">композитор</span>
+          <h5 class="fw-bold">Владимир Пороцкий</h5>
+          <div class="role-tag">Германия, 3 романса</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet4" class="link-meet">4</a>, <a href="#meet7" class="link-meet">7</a>, <a href="#meet9" class="link-meet">9</a>, <a href="#meet37" class="link-meet">37</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. Маргарита Петрова -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-petrova">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-piano"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">композитор</span>
+          <h5 class="fw-bold">Маргарита Петрова</h5>
+          <div class="role-tag">Зеленогорск</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet11" class="link-meet">11</a>, <a href="#meet12" class="link-meet">12</a>, <a href="#meet22" class="link-meet">22</a>, <a href="#meet36b" class="link-meet">36b</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. Сергей Прохоров -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-prokhorov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-newspaper"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">поэт, издатель</span>
+          <h5 class="fw-bold">Сергей Прохоров</h5>
+          <div class="role-tag">Нижний Ингаш</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet4" class="link-meet">4</a>, <a href="#meet8" class="link-meet">8</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. Полина Астафьева -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-polina">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-flower1"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">внучка</span>
+          <h5 class="fw-bold">Полина Астафьева</h5>
+          <div class="role-tag">актриса, режиссёр</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet18" class="link-meet">18</a>, <a href="#meet39" class="link-meet">39</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14. Валентин Курбатов -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-kurbatov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-chat-quote"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">критик</span>
+          <h5 class="fw-bold">Валентин Курбатов</h5>
+          <div class="role-tag">друг семьи</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet1" class="link-meet">1</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15. Георгий Васильев (ст.) -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-vasilev-sr">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-shield"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">однополчанин</span>
+          <h5 class="fw-bold">Георгий Васильев (ст.)</h5>
+          <div class="role-tag">полковник</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet2" class="link-meet">2</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16. Владимир Кузнецов -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-kuznetsov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-camera-reels"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">режиссёр</span>
+          <h5 class="fw-bold">Владимир Кузнецов</h5>
+          <div class="role-tag">документалист</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet25a" class="link-meet">25a</a>, <a href="#meet26" class="link-meet">26</a>, <a href="#meet34" class="link-meet">34</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17. Галина Шелудченко -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-sheludchenko">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-guitar"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">певица</span>
+          <h5 class="fw-bold">Галина Шелудченко</h5>
+          <div class="role-tag">засл. работник культуры</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet3" class="link-meet">3</a>, <a href="#meet4" class="link-meet">4</a>, <a href="#meet9" class="link-meet">9</a>, <a href="#meet11" class="link-meet">11</a>, <a href="#meet36b" class="link-meet">36b</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18. Татьяна Губарева -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-gubareva">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-people"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">педагог</span>
+          <h5 class="fw-bold">Татьяна Губарева</h5>
+          <div class="role-tag">Подтесово</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet5" class="link-meet">5</a>, <a href="#meet11" class="link-meet">11</a>, <a href="#meet36b" class="link-meet">36b</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 19. Лариса Марзоева -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-marzoeva">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-voicemail"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">нар. арт. РФ</span>
+          <h5 class="fw-bold">Лариса Марзоева</h5>
+          <div class="role-tag">солистка оперы</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet7" class="link-meet">7</a>, <a href="#meet9" class="link-meet">9</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 20. Виктор Тинигин -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-tinigin">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-camera"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">фотохудожник</span>
+          <h5 class="fw-bold">Виктор Тинигин</h5>
+          <div class="role-tag">лауреат премии</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet7" class="link-meet">7</a>, <a href="#meet45" class="link-meet">45</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 21. Людмила Кротова (Феррис) -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-krotova">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-feather"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">писатель</span>
+          <h5 class="fw-bold">Людмила Кротова (Феррис)</h5>
+          <div class="role-tag">Железногорск</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet35" class="link-meet">35</a>, <a href="#meet43" class="link-meet">43</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 22. Валерий Лылин -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-lylin">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-mic"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">бард</span>
+          <h5 class="fw-bold">Валерий Лылин</h5>
+          <div class="role-tag">журналист</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet23" class="link-meet">23</a>, <a href="#meet35" class="link-meet">35</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 23. Кристина Пырх -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-pyrkh">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-film"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">режиссёр</span>
+          <h5 class="fw-bold">Кристина Пырх</h5>
+          <div class="role-tag">автор фильмов</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet2" class="link-meet">2</a>, <a href="#meet44" class="link-meet">44</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 24. Юрий Лушников -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-lushnikov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-soldier"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">полковник</span>
+          <h5 class="fw-bold">Юрий Лушников</h5>
+          <div class="role-tag">доцент СФУ</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet39" class="link-meet">39</a>, <a href="#meet44" class="link-meet">44</a>, <a href="#meet45" class="link-meet">45</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 25. Римма Дугина -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-dugina">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-building"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">музейщик</span>
+          <h5 class="fw-bold">Римма Дугина</h5>
+          <div class="role-tag">создатель музея в ПУ №19</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet0" class="link-meet">0</a>, <a href="#meet14" class="link-meet">14</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 26. Линда Шамкова -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-shamkova">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-tree"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">поэтесса</span>
+          <h5 class="fw-bold">Линда Шамкова</h5>
+          <div class="role-tag">клуб «Зелёный огонёк»</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet0" class="link-meet">0</a>, <a href="#meet2" class="link-meet">2</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 27. Владимир Попов -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-popov-v">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-camera"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">фотограф</span>
+          <h5 class="fw-bold">Владимир Попов</h5>
+          <div class="role-tag">поклонник творчества</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet0" class="link-meet">0</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 28. Ансамбль «Мелодия» -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-melodiya">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-music-note"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">коллектив</span>
+          <h5 class="fw-bold">Ансамбль «Мелодия»</h5>
+          <div class="role-tag">вокальный ансамбль</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet0" class="link-meet">0</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 29. Ансамбль «Енисеюшка» -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-eniseyushka">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-people"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">фольклор</span>
+          <h5 class="fw-bold">Ансамбль «Енисеюшка»</h5>
+          <div class="role-tag">из Овсянки</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet0" class="link-meet">0</a>, <a href="#meet13" class="link-meet">13</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 30. Марина Маликова -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-malikova">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-feather"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">поэтесса</span>
+          <h5 class="fw-bold">Марина Маликова</h5>
+          <div class="role-tag">автор стихов</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet1" class="link-meet">1</a>, <a href="#meet14" class="link-meet">14</a>, <a href="#meet20" class="link-meet">20</a>, <a href="#meet46" class="link-meet">46</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 31. Маргарита Радкевич -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-radkevich">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-music-note"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">поэт, композитор</span>
+          <h5 class="fw-bold">Маргарита Радкевич</h5>
+          <div class="role-tag">исполнительница</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet1" class="link-meet">1</a>, <a href="#meet13" class="link-meet">13</a>, <a href="#meet14" class="link-meet">14</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 32. Олег Меремкулов -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-meremkulov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-piano"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">композитор</span>
+          <h5 class="fw-bold">Олег Меремкулов</h5>
+          <div class="role-tag">симфония «По прочтении Астафьева»</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet6" class="link-meet">6</a>, <a href="#meet25a" class="link-meet">25a</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 33. Лидия Рождественская -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-rozhdestvenskaya">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-book"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">кинодраматург</span>
+          <h5 class="fw-bold">Лидия Рождественская</h5>
+          <div class="role-tag">дочь поэта</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet4" class="link-meet">4</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 34. Елена Лихацкая -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-likhatskaya">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-brush"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">художник</span>
+          <h5 class="fw-bold">Елена Лихацкая</h5>
+          <div class="role-tag">иллюстратор</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet4" class="link-meet">4</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 35. Анатолий Левитин -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-levitin">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-bank"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">академик РАХ</span>
+          <h5 class="fw-bold">Анатолий Левитин</h5>
+          <div class="role-tag">живописец</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet4" class="link-meet">4</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 36. Учащиеся Подтесовской школы -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-podtesovo">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-people"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">юные краеведы</span>
+          <h5 class="fw-bold">Учащиеся Подтесовской школы</h5>
+          <div class="role-tag">музей им. Астафьева</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet5" class="link-meet">5</a>, <a href="#meet11" class="link-meet">11</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 37. Ольга Синицына -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-sinitsyna">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-mic"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">нар. арт. РФ</span>
+          <h5 class="fw-bold">Ольга Синицына</h5>
+          <div class="role-tag">певица, жена Пороцкого</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet9" class="link-meet">9</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 38. Михаил Бенюмов -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-benyumov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-music-note"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">дирижёр</span>
+          <h5 class="fw-bold">Михаил Бенюмов</h5>
+          <div class="role-tag">засл. арт. РФ</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet9" class="link-meet">9</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 39. Владимир Зеленов -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-zelenov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-brush"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">скульптор</span>
+          <h5 class="fw-bold">Владимир Зеленов</h5>
+          <div class="role-tag">друг семьи</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet9" class="link-meet">9</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 40. Георгий Васильев (мл.) -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-vasilev-jr">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-chat"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">литератор</span>
+          <h5 class="fw-bold">Георгий Васильев (мл.)</h5>
+          <div class="role-tag">клуб «Высокий берег»</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet2" class="link-meet">2</a>, <a href="#meet9" class="link-meet">9</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 41. Владимир и Христина Поповы -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-popovy">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-gift"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">меценаты</span>
+          <h5 class="fw-bold">Владимир и Христина Поповы</h5>
+          <div class="role-tag">члены попечительского совета</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet9" class="link-meet">9</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 42. Геннадий Капустинский -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-kapustinsky">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-book"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">полковник</span>
+          <h5 class="fw-bold">Геннадий Капустинский</h5>
+          <div class="role-tag">автор книги</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet10" class="link-meet">10</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 43. Супруги Фроловы -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-frolovy">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-music-note"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">дуэт</span>
+          <h5 class="fw-bold">Супруги Фроловы</h5>
+          <div class="role-tag">исполнители песен</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet10" class="link-meet">10</a>, <a href="#meet12" class="link-meet">12</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 44. Евгений Балданов -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-baldanov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-mic"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">солист</span>
+          <h5 class="fw-bold">Евгений Балданов</h5>
+          <div class="role-tag">солист оперы</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet11" class="link-meet">11</a>, <a href="#meet22" class="link-meet">22</a>, <a href="#meet36b" class="link-meet">36b</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 45. Семейный ансамбль Чепурных -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-chepurnye">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-piano"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">инструменталисты</span>
+          <h5 class="fw-bold">Семейный ансамбль Чепурных</h5>
+          <div class="role-tag">квартет</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet11" class="link-meet">11</a>, <a href="#meet20" class="link-meet">20</a>, <a href="#meet36a" class="link-meet">36a</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 46. Анна Ковалёва -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-kovaleva">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-university"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">руководитель</span>
+          <h5 class="fw-bold">Анна Ковалёва</h5>
+          <div class="role-tag">Центр изучения в КГПУ</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet11" class="link-meet">11</a>, <a href="#meet36b" class="link-meet">36b</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 47. Клавдия Зайцева -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-zaytseva">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-chat"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">читательница</span>
+          <h5 class="fw-bold">Клавдия Зайцева</h5>
+          <div class="role-tag">постоянная участница</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet13" class="link-meet">13</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 48. Тимур Зульфикаров -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-zulfikarov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-feather"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">писатель</span>
+          <h5 class="fw-bold">Тимур Зульфикаров</h5>
+          <div class="role-tag">кинодраматург</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet13" class="link-meet">13</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 49. Нина Черняева -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-chernyaeva">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-bank"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">общественница</span>
+          <h5 class="fw-bold">Нина Черняева</h5>
+          <div class="role-tag">фонд «София»</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet14" class="link-meet">14</a>, <a href="#meet15" class="link-meet">15</a>, <a href="#meet40" class="link-meet">40</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 50. Анатолий Шишков -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-shishkov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-soldier"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">гвардии полковник</span>
+          <h5 class="fw-bold">Анатолий Шишков</h5>
+          <div class="role-tag">участник встреч</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet14" class="link-meet">14</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 51. Преподаватели Рыбинского района -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-rybinsk">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-people"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">педагоги</span>
+          <h5 class="fw-bold">Преподаватели Рыбинского района</h5>
+          <div class="role-tag">участники выезда в Бородино</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet15" class="link-meet">15</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 52. Юлия Киселёва -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-kiseleva-y">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-music-note"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">музыковед</span>
+          <h5 class="fw-bold">Юлия Киселёва</h5>
+          <div class="role-tag">солистка</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet16" class="link-meet">16</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 53. Мария Ковтун -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-kovtun">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-mic"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">студентка</span>
+          <h5 class="fw-bold">Мария Ковтун</h5>
+          <div class="role-tag">колледж искусств</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet18" class="link-meet">18</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 54. Константин Войнов -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-voynov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-brush"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">художник</span>
+          <h5 class="fw-bold">Константин Войнов</h5>
+          <div class="role-tag">засл. художник РФ</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet19" class="link-meet">19</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 55. Александра Лылина -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-lylina">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-suit-heart"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">паломница</span>
+          <h5 class="fw-bold">Александра Лылина</h5>
+          <div class="role-tag">участница поездки</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet19" class="link-meet">19</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 56. Лилия Ефремова -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-efremova">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-violin"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">виолончелистка</span>
+          <h5 class="fw-bold">Лилия Ефремова</h5>
+          <div class="role-tag">солистка оркестра</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet19" class="link-meet">19</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 57. Геннадий Карепов -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-karepov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-brush"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">профессор</span>
+          <h5 class="fw-bold">Геннадий Карепов</h5>
+          <div class="role-tag">художник, поэт</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet20" class="link-meet">20</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 58. Студенты СФУ (проект памятника) -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-sfu-students">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-people"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">студенты</span>
+          <h5 class="fw-bold">Студенты СФУ</h5>
+          <div class="role-tag">авторы проектов памятника картошке</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet20" class="link-meet">20</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 59. Наталья Огурцова -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-ogurtsova">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-piano"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">пианистка</span>
+          <h5 class="fw-bold">Наталья Огурцова</h5>
+          <div class="role-tag">концертмейстер</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet21" class="link-meet">21</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 60. Светлана Шидловская -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-shidlovskaya">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-mic"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">солистка</span>
+          <h5 class="fw-bold">Светлана Шидловская</h5>
+          <div class="role-tag">студия «Эвридика»</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet32" class="link-meet">32</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 61. Михаил Енцов -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-entsov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-music-note"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">певец</span>
+          <h5 class="fw-bold">Михаил Енцов</h5>
+          <div class="role-tag">ветеран хора оперы</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet32" class="link-meet">32</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 62. Людмила Схиртладзе -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-skirtladze">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-piano"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">концертмейстер</span>
+          <h5 class="fw-bold">Людмила Схиртладзе</h5>
+          <div class="role-tag">пианистка</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet32" class="link-meet">32</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 63. Трофим Алмаев -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-almaev-t">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-person"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">чтец</span>
+          <h5 class="fw-bold">Трофим Алмаев</h5>
+          <div class="role-tag">учащийся</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet32" class="link-meet">32</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 64. Ирина Алмаева -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-almaeva-i">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-person"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">наставник</span>
+          <h5 class="fw-bold">Ирина Алмаева</h5>
+          <div class="role-tag">мама, руководитель</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet32" class="link-meet">32</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 65. Сергей Задереев -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-zadereev">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-book"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">писатель</span>
+          <h5 class="fw-bold">Сергей Задереев</h5>
+          <div class="role-tag">экс-глава писательской орг.</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet34" class="link-meet">34</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 66. Наталья Ерышева -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-erysheva">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-feather"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">поэтесса</span>
+          <h5 class="fw-bold">Наталья Ерышева</h5>
+          <div class="role-tag">дочь фронтовика</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet23" class="link-meet">23</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 67. Владислав Спиров -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-spirov">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-projector"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">автор слайд-рассказа</span>
+          <h5 class="fw-bold">Владислав Спиров</h5>
+          <div class="role-tag">«Поэзия тайги»</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet31" class="link-meet">31</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 68. Хор «Неувядаемый Цвет» -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-neuvyadaemy">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-people"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">хор</span>
+          <h5 class="fw-bold">Хор «Неувядаемый Цвет»</h5>
+          <div class="role-tag">духовные песнопения</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet31" class="link-meet">31</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 69. Александр Белопашинцев -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-belopashintsev">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-mic"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">певец</span>
+          <h5 class="fw-bold">Александр Белопашинцев</h5>
+          <div class="role-tag">солист, педагог</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet37" class="link-meet">37</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 70. Валентина Бойко -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-boyko">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-piano"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">пианистка</span>
+          <h5 class="fw-bold">Валентина Бойко</h5>
+          <div class="role-tag">профессор</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet37" class="link-meet">37</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 71. Егор Кончиц -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-konchits">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-person"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">юный чтец</span>
+          <h5 class="fw-bold">Егор Кончиц</h5>
+          <div class="role-tag">школьник</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet37" class="link-meet">37</a>, <a href="#meet39" class="link-meet">39</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 72. Николай Гайдук -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-gayduk">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-feather"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">поэт</span>
+          <h5 class="fw-bold">Николай Гайдук</h5>
+          <div class="role-tag">член СП</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet38" class="link-meet">38</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 73. Валерий Сибгатуллин -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-sibgatullin">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-blog"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">блогер</span>
+          <h5 class="fw-bold">Валерий Сибгатуллин</h5>
+          <div class="role-tag">библиофил</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet39" class="link-meet">39</a>, <a href="#meet48" class="link-meet">48</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 74. Эмма Гензе -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-genze">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-soldier"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">курсантка</span>
+          <h5 class="fw-bold">Эмма Гензе</h5>
+          <div class="role-tag">военный переводчик</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet39" class="link-meet">39</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 75. Ксения Красильникова -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-krasilnikova">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-mic"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">курсантка</span>
+          <h5 class="fw-bold">Ксения Красильникова</h5>
+          <div class="role-tag">певица</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet39" class="link-meet">39</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 76. Томила Садрулина -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-sadrulina">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-piano"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">курсантка</span>
+          <h5 class="fw-bold">Томила Садрулина</h5>
+          <div class="role-tag">пианистка</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet39" class="link-meet">39</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 77. Ансамбль «Откровение» -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-otkrovenie">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-people"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">ансамбль</span>
+          <h5 class="fw-bold">Ансамбль «Откровение»</h5>
+          <div class="role-tag">из Таскино</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet40" class="link-meet">40</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 78. Анастасия Качановская -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-kachanovskaya">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-soldier"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">курсантка</span>
+          <h5 class="fw-bold">Анастасия Качановская</h5>
+          <div class="role-tag">певица</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet40" class="link-meet">40</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 79. Андрей Васильев -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-vasiliev-a">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-tree"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">спасатель</span>
+          <h5 class="fw-bold">Андрей Васильев</h5>
+          <div class="role-tag">писатель-дебютант</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet40" class="link-meet">40</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 80. Алексей Перепрыгин -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-pereprygin">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-mic"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">солист оперы</span>
+          <h5 class="fw-bold">Алексей Перепрыгин</h5>
+          <div class="role-tag">лауреат конкурсов</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet40" class="link-meet">40</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 81. Сергей Усик -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-usik">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-camera"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">фотохудожник</span>
+          <h5 class="fw-bold">Сергей Усик</h5>
+          <div class="role-tag">книга «Исход»</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet41" class="link-meet">41</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 82. о. Иоанн Ошин -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-oshin">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-church"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">священник</span>
+          <h5 class="fw-bold">о. Иоанн Ошин</h5>
+          <div class="role-tag">старообрядческий храм</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet41" class="link-meet">41</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 83. Аделя Броднева -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-brodneva">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-archive"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">музейщик</span>
+          <h5 class="fw-bold">Аделя Броднева</h5>
+          <div class="role-tag">засл. работник культуры</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet41" class="link-meet">41</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 84. Ольга Ермакова -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-ermakova">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-book"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">историк</span>
+          <h5 class="fw-bold">Ольга Ермакова</h5>
+          <div class="role-tag">исследователь</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet41" class="link-meet">41</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 85. Данил Беляев -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-belyaev">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-soldier"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">курсант</span>
+          <h5 class="fw-bold">Данил Беляев</h5>
+          <div class="role-tag">чтец</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet41" class="link-meet">41</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 86. Светлана Литвинова -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-litvinova">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-soldier"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">курсантка</span>
+          <h5 class="fw-bold">Светлана Литвинова</h5>
+          <div class="role-tag">чтец</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet41" class="link-meet">41</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 87. Илья Ткаченко -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-tkachenko">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-soldier"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">курсант</span>
+          <h5 class="fw-bold">Илья Ткаченко</h5>
+          <div class="role-tag">чтец</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet41" class="link-meet">41</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 88. Инна Рычкова -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-rychkova">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-hand-heart"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">волонтёр</span>
+          <h5 class="fw-bold">Инна Рычкова</h5>
+          <div class="role-tag">гуманитарный центр</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet42" class="link-meet">42</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 89. Вероника Махотина -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-makhotina">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-mic"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">джазовая певица</span>
+          <h5 class="fw-bold">Вероника Махотина</h5>
+          <div class="role-tag">засл. работник культуры</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet42" class="link-meet">42</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 90. Валентина Литвина -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-litvina">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-mic"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">засл. артистка РФ</span>
+          <h5 class="fw-bold">Валентина Литвина</h5>
+          <div class="role-tag">певица</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet43" class="link-meet">43</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 91. Валерия Владимирова -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-vladimirova">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-soldier"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">курсантка</span>
+          <h5 class="fw-bold">Валерия Владимирова</h5>
+          <div class="role-tag">певица</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet43" class="link-meet">43</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 92. Ирина Шульгина -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-shulgina">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-music-note"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">композитор</span>
+          <h5 class="fw-bold">Ирина Шульгина</h5>
+          <div class="role-tag">певица, ансамбль «КрасА»</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet44" class="link-meet">44</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 93. Преподаватели колледжа искусств -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-artcollege">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-people"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">педагоги</span>
+          <h5 class="fw-bold">Преподаватели колледжа искусств</h5>
+          <div class="role-tag">им. Иванова-Раткевича</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet44" class="link-meet">44</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 94. Григорий Вихтеев -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-vikhteev">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-soldier"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">курсант</span>
+          <h5 class="fw-bold">Григорий Вихтеев</h5>
+          <div class="role-tag">певец</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet44" class="link-meet">44</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 95. Анастасия Манукалова (уже была) -->
+    <!-- 96. Наталья Черненко -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-chernenko">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-church"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">певица</span>
+          <h5 class="fw-bold">Наталья Черненко</h5>
+          <div class="role-tag">архиерейский хор</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet48" class="link-meet">48</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 97. Вадим Наговицын -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-nagovitsyn">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-theater"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">режиссёр</span>
+          <h5 class="fw-bold">Вадим Наговицын</h5>
+          <div class="role-tag">Литературный театр</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet48" class="link-meet">48</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 98. Артисты Литературного театра -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-lit-teatr">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-people"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">труппа</span>
+          <h5 class="fw-bold">Артисты Литературного театра</h5>
+          <div class="role-tag">спектакль «Бог не оставит Россию»</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet48" class="link-meet">48</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 99. Олег Нехаев -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-nekhaev">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-book"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">писатель</span>
+          <h5 class="fw-bold">Олег Нехаев</h5>
+          <div class="role-tag">книга ЖЗЛ об Астафьеве</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet47" class="link-meet">47</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 100. Борис Плоских -->
+    <div class="col-xl-3 col-lg-4 col-md-6" id="guest-ploskikh">
+      <div class="guest-card">
+        <div class="photo-placeholder"><i class="bi bi-theater"></i></div>
+        <div class="p-3">
+          <span class="guest-badge">актёр</span>
+          <h5 class="fw-bold">Борис Плоских</h5>
+          <div class="role-tag">театр им. Пушкина</div>
+          <ul class="meet-list"><li><i class="bi bi-calendar-check"></i> Затесь: <a href="#meet47" class="link-meet">47</a></li></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="alert alert-info">
+        <i class="bi bi-info-circle-fill me-2"></i> Всего представлено <strong>более 100 карточек гостей</strong> (включая коллективы). Каждое имя связано с встречами через кликабельные номера Затесей.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== ВСТРЕЧИ (49 карточек, все с id meet0...meet48) ==================== -->
+<div id="meets-section" class="page-header" style="background: #244d33;">
+  <div class="container text-center">
+    <h1 class="display-4 fw-normal" style="font-family: 'Times New Roman', serif;">Встречи клуба «Затесь»</h1>
+    <p class="lead fs-4">49 заседаний (Затесь‑0 … Затесь‑48) · переход к гостям</p>
+    <div class="mt-3">
+      <a href="#guests-section" class="btn btn-light btn-lg rounded-pill px-4"><i class="bi bi-arrow-left-circle"></i> Вернуться к гостям</a>
+    </div>
+  </div>
+</div>
+
+<div class="container mb-5">
+  <div class="row g-4">
+
+    <!-- Затесь‑0 -->
+    <div class="col-lg-4 col-md-6" id="meet0">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑0</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>28 ноября 2010</span>
+        <h5 class="fw-bold">Вечер памяти писателя</h5>
+        <div class="theme-badge">Учреждение клуба</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-panteleeva" class="link-guest">Антонина Пантелеева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-dugina" class="link-guest">Римма Дугина</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-shamkova" class="link-guest">Линда Шамкова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-popov-v" class="link-guest">Владимир Попов</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-melodiya" class="link-guest">Ансамбль «Мелодия»</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-eniseyushka" class="link-guest">Ансамбль «Енисеюшка»</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑1 -->
+    <div class="col-lg-4 col-md-6" id="meet1">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑1</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>26 февраля 2011</span>
+        <h5 class="fw-bold">Нам бы вернуться к его высоте</h5>
+        <div class="theme-badge">Открытие клуба</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-malikova" class="link-guest">Марина Маликова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kurbatov" class="link-guest">Валентин Курбатов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-shvetsova" class="link-guest">Валентина Швецова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-radkevich" class="link-guest">Маргарита Радкевич</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sorokina" class="link-guest">Светлана Сорокина</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑2 -->
+    <div class="col-lg-4 col-md-6" id="meet2">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑2</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>30 апреля 2011</span>
+        <h5 class="fw-bold">Я спешу к вам, родные мои!</h5>
+        <div class="theme-badge">К 87-летию</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-shvetsova" class="link-guest">Валентина Швецова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-panteleeva" class="link-guest">Антонина Пантелеева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-vasilev-sr" class="link-guest">Георгий Васильев (ст.)</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-pashtov" class="link-guest">Герман Паштов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-pyrkh" class="link-guest">Кристина Пырх</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-shamkova" class="link-guest">Линда Шамкова</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑3 -->
+    <div class="col-lg-4 col-md-6" id="meet3">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑3</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>25 июня 2011</span>
+        <h5 class="fw-bold">Выше музыки нет ничего...</h5>
+        <div class="theme-badge">Музыка Астафьева</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sorokina" class="link-guest">Светлана Сорокина</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sheludchenko" class="link-guest">Галина Шелудченко</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑4 -->
+    <div class="col-lg-4 col-md-6" id="meet4">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑4</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>26 ноября 2011</span>
+        <h5 class="fw-bold">Презентация альманаха №1</h5>
+        <div class="theme-badge">Первый номер</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-porotsky" class="link-guest">Владимир Пороцкий</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-pashtov" class="link-guest">Герман Паштов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-panteleeva" class="link-guest">Антонина Пантелеева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-likhatskaya" class="link-guest">Елена Лихацкая</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-levitin" class="link-guest">Анатолий Левитин</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑5 -->
+    <div class="col-lg-4 col-md-6" id="meet5">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑5</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>14 января 2012</span>
+        <h5 class="fw-bold">Затесь в Подтесово</h5>
+        <div class="theme-badge">Школьный музей</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-gubareva" class="link-guest">Татьяна Губарева</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-podtesovo" class="link-guest">Учащиеся Подтесовской школы</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑6 -->
+    <div class="col-lg-4 col-md-6" id="meet6">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑6</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>28 апреля 2012</span>
+        <h5 class="fw-bold">Посреди России</h5>
+        <div class="theme-badge">«Пастух и пастушка»</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-meremkulov" class="link-guest">Олег Меремкулов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sorokina" class="link-guest">Светлана Сорокина</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑7 -->
+    <div class="col-lg-4 col-md-6" id="meet7">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑7</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>24 ноября 2012</span>
+        <h5 class="fw-bold">Память Астафьевых</h5>
+        <div class="theme-badge">Премьера «Эх, года...»</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-porotsky" class="link-guest">Владимир Пороцкий</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-marzoeva" class="link-guest">Лариса Марзоева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-tinigin" class="link-guest">Виктор Тинигин</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑8 -->
+    <div class="col-lg-4 col-md-6" id="meet8">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑8</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>6 декабря 2012</span>
+        <h5 class="fw-bold">Затесь в Нижнем Ингаше</h5>
+        <div class="theme-badge">Выезд в библиотеку</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-panteleeva" class="link-guest">Антонина Пантелеева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-prokhorov" class="link-guest">Сергей Прохоров</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑9 -->
+    <div class="col-lg-4 col-md-6" id="meet9">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑9</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>2 февраля 2012</span>
+        <h5 class="fw-bold">Созвучие</h5>
+        <div class="theme-badge">Пороцкий и Астафьев</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-porotsky" class="link-guest">Владимир Пороцкий</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-benyumov" class="link-guest">Михаил Бенюмов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sinitsyna" class="link-guest">Ольга Синицына</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-marzoeva" class="link-guest">Лариса Марзоева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-zelenov" class="link-guest">Владимир Зеленов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-vasilev-jr" class="link-guest">Георгий Васильев (мл.)</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-popovy" class="link-guest">Владимир и Христина Поповы</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑10 -->
+    <div class="col-lg-4 col-md-6" id="meet10">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑10</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>1 марта 2012</span>
+        <h5 class="fw-bold">Анатолий Козлов</h5>
+        <div class="theme-badge">Домашний музей</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kozlov" class="link-guest">Анатолий Козлов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kapustinsky" class="link-guest">Геннадий Капустинский</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-frolovy" class="link-guest">Супруги Фроловы</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑11 -->
+    <div class="col-lg-4 col-md-6" id="meet11">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑11</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>18 мая 2013</span>
+        <h5 class="fw-bold">Поём Астафьева</h5>
+        <div class="theme-badge">Премьера «Астафьевская тень»</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-baldanov" class="link-guest">Евгений Балданов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-petrova" class="link-guest">Маргарита Петрова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-gubareva" class="link-guest">Татьяна Губарева</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-chepurnye" class="link-guest">Семейный ансамбль Чепурных</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kovaleva" class="link-guest">Анна Ковалёва</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-podtesovo" class="link-guest">Учащиеся Подтесовской школы</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑12 -->
+    <div class="col-lg-4 col-md-6" id="meet12">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑12</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>23 ноября 2013</span>
+        <h5 class="fw-bold">Выстоять!</h5>
+        <div class="theme-badge">Юбилейный альманах</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kozlov" class="link-guest">Анатолий Козлов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sorokina" class="link-guest">Светлана Сорокина</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-pashtov" class="link-guest">Герман Паштов</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-frolovy" class="link-guest">Супруги Фроловы</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑13 -->
+    <div class="col-lg-4 col-md-6" id="meet13">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑13</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>11 января 2014</span>
+        <h5 class="fw-bold">Святый вечер добрым людям</h5>
+        <div class="theme-badge">Рождество</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-eniseyushka" class="link-guest">Ансамбль «Енисеюшка»</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-zaytseva" class="link-guest">Клавдия Зайцева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kozlov" class="link-guest">Анатолий Козлов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-zulfikarov" class="link-guest">Тимур Зульфикаров</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑14 -->
+    <div class="col-lg-4 col-md-6" id="meet14">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑14</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>27 февраля 2014</span>
+        <h5 class="fw-bold">Затесь в ПУ №19</h5>
+        <div class="theme-badge">Училище Астафьева</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-dugina" class="link-guest">Римма Дугина</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sorokina" class="link-guest">Светлана Сорокина</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-radkevich" class="link-guest">Маргарита Радкевич</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-panteleeva" class="link-guest">Антонина Пантелеева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-malikova" class="link-guest">Марина Маликова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-chernyaeva" class="link-guest">Нина Черняева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-shishkov" class="link-guest">Анатолий Шишков</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑15 -->
+    <div class="col-lg-4 col-md-6" id="meet15">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑15</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>18 марта 2014</span>
+        <h5 class="fw-bold">Затесь в Бородино</h5>
+        <div class="theme-badge">Школьники читают</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-panteleeva" class="link-guest">Антонина Пантелеева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-chernyaeva" class="link-guest">Нина Черняева</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-rybinsk" class="link-guest">Преподаватели Рыбинского района</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑16 -->
+    <div class="col-lg-4 col-md-6" id="meet16">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑16</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>30 апреля 2014</span>
+        <h5 class="fw-bold">Русский берег</h5>
+        <div class="theme-badge">К 90-летию</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva-y" class="link-guest">Юлия Киселёва</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑17 (2014) -->
+    <div class="col-lg-4 col-md-6" id="meet17">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑17</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>2014 (осень)</span>
+        <h5 class="fw-bold">Затесь в Партизанском районе</h5>
+        <div class="theme-badge">Астафьевский фестиваль</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-pashtov" class="link-guest">Герман Паштов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sorokina" class="link-guest">Светлана Сорокина</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑18 -->
+    <div class="col-lg-4 col-md-6" id="meet18">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑18</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>18 октября 2014</span>
+        <h5 class="fw-bold">Он общался со всеми на равных...</h5>
+        <div class="theme-badge">Полина Астафьева</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-polina" class="link-guest">Полина Астафьева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sorokina" class="link-guest">Светлана Сорокина</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kovtun" class="link-guest">Мария Ковтун</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑19 -->
+    <div class="col-lg-4 col-md-6" id="meet19">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑19</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>11 января 2015</span>
+        <h5 class="fw-bold">Святая Земля глазами сибиряков</h5>
+        <div class="theme-badge">Книга о паломничестве</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kozlov" class="link-guest">Анатолий Козлов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-panteleeva" class="link-guest">Антонина Пантелеева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-voynov" class="link-guest">Константин Войнов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-lylina" class="link-guest">Александра Лылина</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-efremova" class="link-guest">Лилия Ефремова</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑20 -->
+    <div class="col-lg-4 col-md-6" id="meet20">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑20</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>29 марта 2015</span>
+        <h5 class="fw-bold">Поставим памятник картошке!</h5>
+        <div class="theme-badge">Студенческие проекты</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-karepov" class="link-guest">Геннадий Карепов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-chepurnye" class="link-guest">Семейный ансамбль Чепурных</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-sfu-students" class="link-guest">Студенты СФУ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑21 -->
+    <div class="col-lg-4 col-md-6" id="meet21">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑21</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>30 мая 2015</span>
+        <h5 class="fw-bold">Молодёжь – Виктору Астафьеву</h5>
+        <div class="theme-badge">50 иллюстраций</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-pashtov" class="link-guest">Герман Паштов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-vasyanovich" class="link-guest">Дмитрий Васянович</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-ogurtsova" class="link-guest">Наталья Огурцова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sorokina" class="link-guest">Светлана Сорокина</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑22 -->
+    <div class="col-lg-4 col-md-6" id="meet22">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑22</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>27 июня 2015</span>
+        <h5 class="fw-bold">Музыкальное путешествие</h5>
+        <div class="theme-badge">Концерт солистов</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-baldanov" class="link-guest">Евгений Балданов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-petrova" class="link-guest">Маргарита Петрова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-pashtov" class="link-guest">Герман Паштов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-vasyanovich" class="link-guest">Дмитрий Васянович</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-shvetsova" class="link-guest">Валентина Швецова</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑23 -->
+    <div class="col-lg-4 col-md-6" id="meet23">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑23</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>27 февраля 2016</span>
+        <h5 class="fw-bold">Любимые песни рядового</h5>
+        <div class="theme-badge">Фронтовой дневник</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-panteleeva" class="link-guest">Антонина Пантелеева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-erysheva" class="link-guest">Наталья Ерышева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-lylin" class="link-guest">Валерий Лылин</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑24 -->
+    <div class="col-lg-4 col-md-6" id="meet24">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑24</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>27 марта 2016</span>
+        <h5 class="fw-bold">Мы вам несём свою любовь</h5>
+        <div class="theme-badge">Техникум им. Астафьева</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-people"></i> учащиеся техникума</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑25a (26 апреля 2017) -->
+    <div class="col-lg-4 col-md-6" id="meet25a">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑25a</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>26 апреля 2017</span>
+        <h5 class="fw-bold">Астафьев поёт!</h5>
+        <div class="theme-badge">Уникальные записи</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kuznetsov" class="link-guest">Владимир Кузнецов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-vasyanovich" class="link-guest">Дмитрий Васянович</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑25b (17 июня 2017) -->
+    <div class="col-lg-4 col-md-6" id="meet25b">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑25b</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>17 июня 2017</span>
+        <h5 class="fw-bold">Виктор Астафьев – Аве Мария</h5>
+        <div class="theme-badge">Философия музыки</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-vasyanovich" class="link-guest">Дмитрий Васянович</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑26 -->
+    <div class="col-lg-4 col-md-6" id="meet26">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑26</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>11 ноября 2017</span>
+        <h5 class="fw-bold">Азиатский мир слушает Астафьева</h5>
+        <div class="theme-badge">Турне с «Конём...»</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-vasyanovich" class="link-guest">Дмитрий Васянович</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kuznetsov" class="link-guest">Владимир Кузнецов</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑27 -->
+    <div class="col-lg-4 col-md-6" id="meet27">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑27</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>9 декабря 2017</span>
+        <h5 class="fw-bold">Поэт – Орфей, спускающийся в ад...</h5>
+        <div class="theme-badge">Марина Саввиных</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-savvinykh" class="link-guest">Марина Саввиных</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-vanetik" class="link-guest">Борис Ванетик</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑28 -->
+    <div class="col-lg-4 col-md-6" id="meet28">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑28</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>27 октября 2018</span>
+        <h5 class="fw-bold">Октябрьские ветра</h5>
+        <div class="theme-badge">Осень Астафьева</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-rasyulene" class="link-guest">Раиса Расюлене</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-logvinov" class="link-guest">Анатолий Логвинов</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑29 -->
+    <div class="col-lg-4 col-md-6" id="meet29">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑29</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>8 декабря 2018</span>
+        <h5 class="fw-bold">Стихи и песни сердца моего</h5>
+        <div class="theme-badge">Татьяна Сёмкина</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-semkina" class="link-guest">Татьяна Сёмкина</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-merzlyakova" class="link-guest">Лариса Мерзлякова</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑30 -->
+    <div class="col-lg-4 col-md-6" id="meet30">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑30</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>16 марта 2019</span>
+        <h5 class="fw-bold">И посветлело на душе</h5>
+        <div class="theme-badge">Астафьев и судьбы России</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-teplitsky" class="link-guest">Виктор Теплицкий</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sadyrina" class="link-guest">Татьяна Садырина</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑31 (13 мая 2018) -->
+    <div class="col-lg-4 col-md-6" id="meet31">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑31</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>13 мая 2018</span>
+        <h5 class="fw-bold">Поэзия астафьевского слова</h5>
+        <div class="theme-badge">Слайд-рассказ</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-spirov" class="link-guest">Владислав Спиров</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sorokina" class="link-guest">Светлана Сорокина</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-neuvyadaemy" class="link-guest">Хор «Неувядаемый Цвет»</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑32 -->
+    <div class="col-lg-4 col-md-6" id="meet32">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑32</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>13 апреля 2019</span>
+        <h5 class="fw-bold">Читаем Астафьева, поём для Астафьева</h5>
+        <div class="theme-badge">Молодые таланты</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-almaev-t" class="link-guest">Трофим Алмаев</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-almaeva-i" class="link-guest">Ирина Алмаева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-vasyanovich" class="link-guest">Дмитрий Васянович</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-shidlovskaya" class="link-guest">Светлана Шидловская</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-entsov" class="link-guest">Михаил Енцов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-skirtladze" class="link-guest">Людмила Схиртладзе</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑33 (выезд в Ачинск) -->
+    <div class="col-lg-4 col-md-6" id="meet33">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑33</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>17 апреля 2019</span>
+        <h5 class="fw-bold">Я спешу к вам, родные мои! (Ачинск)</h5>
+        <div class="theme-badge">Выезд</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-semkina" class="link-guest">Татьяна Сёмкина</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑34 -->
+    <div class="col-lg-4 col-md-6" id="meet34">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑34</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>28 апреля 2019</span>
+        <h5 class="fw-bold">У астафьевских родников</h5>
+        <div class="theme-badge">Кинорежиссёр Кузнецов</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kuznetsov" class="link-guest">Владимир Кузнецов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-zadereev" class="link-guest">Сергей Задереев</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑35 -->
+    <div class="col-lg-4 col-md-6" id="meet35">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑35</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>22 июня 2019</span>
+        <h5 class="fw-bold">Людмила Феррис</h5>
+        <div class="theme-badge">Писатель и журналист</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-krotova" class="link-guest">Людмила Кротова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-lylin" class="link-guest">Валерий Лылин</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑36a (29 февраля 2020) -->
+    <div class="col-lg-4 col-md-6" id="meet36a">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑36a</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>29 февраля 2020</span>
+        <h5 class="fw-bold">10 лет клубу. Творческий вечер Анны Киселёвой</h5>
+        <div class="theme-badge">Бенефис</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-chepurnye" class="link-guest">Семейный ансамбль Чепурных</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑36b (18 мая 2020) -->
+    <div class="col-lg-4 col-md-6" id="meet36b">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑36b</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>18 мая 2020</span>
+        <h5 class="fw-bold">Поём Астафьева (повтор)</h5>
+        <div class="theme-badge">Любимые произведения</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-petrova" class="link-guest">Маргарита Петрова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sheludchenko" class="link-guest">Галина Шелудченко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-gubareva" class="link-guest">Татьяна Губарева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-baldanov" class="link-guest">Евгений Балданов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kovaleva" class="link-guest">Анна Ковалёва</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑37 -->
+    <div class="col-lg-4 col-md-6" id="meet37">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑37</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>30 апреля 2021</span>
+        <h5 class="fw-bold">Три романса на стихи Астафьева</h5>
+        <div class="theme-badge">Премьера «Опускаются сумерки»</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-belopashintsev" class="link-guest">Александр Белопашинцев</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-boyko" class="link-guest">Валентина Бойко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-semkina" class="link-guest">Татьяна Сёмкина</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-konchits" class="link-guest">Егор Кончиц</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑38 (Овсянка) -->
+    <div class="col-lg-4 col-md-6" id="meet38">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑38</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>20 июня 2021</span>
+        <h5 class="fw-bold">В Овсянку спешим, как в родную!</h5>
+        <div class="theme-badge">Презентация в Овсянке</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kozlov" class="link-guest">Анатолий Козлов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-gayduk" class="link-guest">Николай Гайдук</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑39 -->
+    <div class="col-lg-4 col-md-6" id="meet39">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑39</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>26 марта 2022</span>
+        <h5 class="fw-bold">Сила астафьевского слова</h5>
+        <div class="theme-badge">Военный институт СФУ</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-konchits" class="link-guest">Егор Кончиц</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kozlov" class="link-guest">Анатолий Козлов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sibgatullin" class="link-guest">Валерий Сибгатуллин</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-semkina" class="link-guest">Татьяна Сёмкина</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-pashtov" class="link-guest">Герман Паштов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-polina" class="link-guest">Полина Астафьева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-lushnikov" class="link-guest">Юрий Лушников</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-krasilnikova" class="link-guest">Ксения Красильникова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-genze" class="link-guest">Эмма Гензе</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sadrulina" class="link-guest">Томила Садрулина</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑40 -->
+    <div class="col-lg-4 col-md-6" id="meet40">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑40</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>15 октября 2022</span>
+        <h5 class="fw-bold">Презентация альманаха‑2022</h5>
+        <div class="theme-badge">200 лет губернии</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-chernyaeva" class="link-guest">Нина Черняева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-pereprygin" class="link-guest">Алексей Перепрыгин</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-otkrovenie" class="link-guest">Ансамбль «Откровение»</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kachanovskaya" class="link-guest">Анастасия Качановская</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-vasiliev-a" class="link-guest">Андрей Васильев</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑41 -->
+    <div class="col-lg-4 col-md-6" id="meet41">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑41</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>11 февраля 2023</span>
+        <h5 class="fw-bold">Астафьев и старообрядцы</h5>
+        <div class="theme-badge">Книга об Агафье Лыковой</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-usik" class="link-guest">Сергей Усик</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-oshin" class="link-guest">о. Иоанн Ошин</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-brodneva" class="link-guest">Аделя Броднева</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-ermakova" class="link-guest">Ольга Ермакова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-belyaev" class="link-guest">Данил Беляев</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-litvinova" class="link-guest">Светлана Литвинова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-tkachenko" class="link-guest">Илья Ткаченко</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑42 -->
+    <div class="col-lg-4 col-md-6" id="meet42">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑42</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>30 марта 2023</span>
+        <h5 class="fw-bold">Рукой согретый хлеб</h5>
+        <div class="theme-badge">Волонтёрство СВО</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-rychkova" class="link-guest">Инна Рычкова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-makhotina" class="link-guest">Вероника Махотина</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑43 -->
+    <div class="col-lg-4 col-md-6" id="meet43">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑43</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>13 мая 2023</span>
+        <h5 class="fw-bold">Знакомый и незнакомый Астафьев</h5>
+        <div class="theme-badge">Железногорск</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-krotova" class="link-guest">Людмила Кротова</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-litvina" class="link-guest">Валентина Литвина</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-vladimirova" class="link-guest">Валерия Владимирова</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑44 -->
+    <div class="col-lg-4 col-md-6" id="meet44">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑44</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>28 октября 2023</span>
+        <h5 class="fw-bold">Дух памяти, родства и правды</h5>
+        <div class="theme-badge">Альманах‑2023</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-pyrkh" class="link-guest">Кристина Пырх</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-shulgina" class="link-guest">Ирина Шульгина</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-artcollege" class="link-guest">Преподаватели колледжа искусств</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-vikhteev" class="link-guest">Григорий Вихтеев</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑45 -->
+    <div class="col-lg-4 col-md-6" id="meet45">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑45</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>2 декабря 2023</span>
+        <h5 class="fw-bold">Дух памяти, родства и правды (повтор)</h5>
+        <div class="theme-badge">Виктор Тинигин</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-tinigin" class="link-guest">Виктор Тинигин</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑46 -->
+    <div class="col-lg-4 col-md-6" id="meet46">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑46</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>20 апреля 2024</span>
+        <h5 class="fw-bold">Презентация альбома «Миг и вечность»</h5>
+        <div class="theme-badge">100 иллюстраций</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-pashtov" class="link-guest">Герман Паштов</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-kiseleva" class="link-guest">Анна Киселёва</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑47 -->
+    <div class="col-lg-4 col-md-6" id="meet47">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑47</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>7 декабря 2024</span>
+        <h5 class="fw-bold">Не стоит Россия без праведника</h5>
+        <div class="theme-badge">Книга Олега Нехаева</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-nekhaev" class="link-guest">Олег Нехаев</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-ploskikh" class="link-guest">Борис Плоских</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Затесь‑48 -->
+    <div class="col-lg-4 col-md-6" id="meet48">
+      <div class="meet-card p-3">
+        <span class="meet-number">Затесь‑48</span>
+        <span class="meet-date"><i class="bi bi-calendar-event"></i>5 апреля 2025</span>
+        <h5 class="fw-bold">Бог не оставит Россию</h5>
+        <div class="theme-badge">Литературный театр</div>
+        <ul class="guest-list">
+          <li><i class="bi bi-person"></i> <a href="#guest-valentina-m" class="link-guest">Валентина Майстренко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-chernenko" class="link-guest">Наталья Черненко</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-nagovitsyn" class="link-guest">Вадим Наговицын</a></li>
+          <li><i class="bi bi-people"></i> <a href="#guest-lit-teatr" class="link-guest">Артисты Литературного театра</a></li>
+          <li><i class="bi bi-person"></i> <a href="#guest-sibgatullin" class="link-guest">Валерий Сибгатуллин</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="alert alert-success">
+        <i class="bi bi-check-circle-fill me-2"></i> Все 49 встреч имеют полные списки участников со ссылками на карточки гостей.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer-site py-4">
+  <div class="container text-center">
+    <p class="mb-0"><i class="bi bi-tree-fill me-2"></i> Клуб почитателей В.П. Астафьева «Затесь» · полный архив · 100+ гостей · 49 встреч · 2010–2025</p>
+    <p class="small mt-2"><a href="#guests-section" class="text-white-50">К гостям</a> · <a href="#meets-section" class="text-white-50">К встречам</a></p>
+  </div>
+</footer>
+
+<!-- Скролл к якорям -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href === "#" || href === "") return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
